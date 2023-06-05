@@ -1,0 +1,1 @@
+Give Hints for the guess game.

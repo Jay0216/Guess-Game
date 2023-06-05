@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.content-cover{
+    background-color: rgb(101, 146, 231);
+    width: 600px;
+    height: 700px;
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.content{
+    margin-top: 60px;
+}
+
+
+
+.num-cards-1{
+    width: 250px;
+    height: 100px;
+    background-color: rgb(70, 80, 73);
+    border-radius: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: 170px;
+}
+
+.num-cards-1 h3{
+    padding-top: 35px;
+}
+
+.button{
+    margin-top: 30px;
+}
+
+.button #guess-btn{
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(245, 212, 64);
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.guess-num{
+    font-size: 25px;
+}
+
+.button-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-right: 19px;
+}
+
+.prev-btn{
+    margin-right: 80px;
+}
+
+.card-div-1{
+    width: 250px;
+    height: 100px;
+    background-color: green;
+    margin-left: 170px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    padding-top: 25px;
+}
+
+.start-game{
+    margin-top: 200px;
+}
+
+.start-game h2{
+    font-size: 30px;
+}
+.start-game #start{
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(90, 241, 70);
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+.content-2{
+    margin-top: 180px;
+}
+
+.content-2 h2{
+    font-size: 28px;
+}
+
+#prev{
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(38, 71, 218);
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#next{
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(38, 71, 218);
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.reset{
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+}
