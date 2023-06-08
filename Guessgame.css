@@ -18,9 +18,54 @@ body{
 
 .content{
     margin-top: 60px;
+    display: none;
+}
+
+.start-content{
+    margin-top: 180px;
+}
+
+.start-content #start-game-btn{
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(90, 241, 70);
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+.start-content #how-to-play-btn{
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(243, 115, 64);
+    border-radius: 25px;
+    margin-top: 30px;
 }
 
 
+
+
+.start-content h2{
+    font-size: 25px;
+}
+
+.how-to-play{
+    display: none;
+    text-align: justify;
+    margin-left: 40px;
+    margin-top: 60px;
+}
+
+.content-2{
+    margin-top: 180px;
+}
 
 .num-cards-1{
     width: 250px;
@@ -79,32 +124,7 @@ body{
     padding-top: 25px;
 }
 
-.start-game{
-    margin-top: 200px;
-}
 
-.start-game h2{
-    font-size: 30px;
-}
-.start-game #start{
-    border: none;
-    cursor: pointer;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    background-color: rgb(90, 241, 70);
-    border-radius: 25px;
-    margin-top: 30px;
-}
-
-.content-2{
-    margin-top: 180px;
-}
-
-.content-2 h2{
-    font-size: 28px;
-}
 
 #prev{
     border: none;
@@ -143,3 +163,5 @@ body{
     border-radius: 25px;
     font-family: 'Poppins', sans-serif;
 }
+
+

@@ -5,6 +5,12 @@ const num_open = document.getElementById('num-open-1');
 const next_btn = document.getElementById('next');
 const prev_btn = document.getElementById('prev');
 const guess_question = document.querySelector('.guess-question');
+const start_game_btn = document.getElementById('start-game-btn');
+const question_content = document.getElementById('content')
+const start_content = document.getElementById('start-content')
+const game_instruction_show_btn = document.getElementById('how-to-play-btn')
+const game_instructions = document.getElementById('game-instructions')
+
 
 //created card_1
 const create_div_1 = document.createElement('div')
@@ -15,10 +21,39 @@ create_div_1.append(create_h3_1)
 
 
 
+
+//create the start game functionality
+const start_game = () => {
+    console.log('Start Game..!!')
+
+    start_content.replaceWith(question_content)
+
+    question_content.style.display = 'block'
+
+
+}
+
+
+start_game_btn.addEventListener('click', start_game)
+
+
+
+//show game instructions
+const show_game_instructions = () => {
+    start_content.replaceWith(game_instructions)
+
+    game_instructions.style.display = 'block'
+}
+
+
+game_instruction_show_btn.addEventListener('click', show_game_instructions)
+
+
+
 //hint cards data(details)
 const hint_contents = [
     {
-        hint: 'Called as Pearl of the Indian Ocean'
+        hint: 'a country that is part of the United Kingdom'
     },
 
     {
@@ -26,15 +61,35 @@ const hint_contents = [
     },
 
     {
-        hint: 'Balandeor 7 times winner'
+        hint: 'A long orange root vegetable'
     },
 
     {
-        hint: 'Heavy metal song in 90"s'
+        hint: 'A food made by baking a dough of flour or meal'
     },
 
     {
         hint: 'Won the FIFA 1958'
+    },
+
+    {
+        hint: 'A place where goods are sold'
+    },
+
+    {
+        hint: 'The hair growing on a men"s face'
+    },
+
+    {
+        hint: 'a fruit that is often red or green and grows on trees'
+    },
+
+    {
+        hint: 'a device used for capturing and storing visual images'
+    },
+
+    {
+        hint: 'a person who designs buildings, structures, or spaces'
     }
 ]
 
@@ -49,6 +104,12 @@ const hint_cards = () => {
     const hint_card_data = hint_contents[hint_card_counter]
     create_h3_1.innerHTML = hint_card_data.hint
 }
+
+const already_loaded_hints = () => {
+    hint_cards()
+}
+
+window.addEventListener('DOMContentLoaded', already_loaded_hints)
 
 
 //next hint card
@@ -148,16 +209,36 @@ const guess_questions = [
     },
 
     {
-        question: 'Guess the Player ?'
+        question: 'Guess the Vegetable ?'
     }, 
 
     {
-        question: 'Guess the Song ?'
+        question: 'Guess the Food ?'
     },
 
 
     {
         question: 'Guess the won Country ?'
+    },
+
+    {
+        question:'Guess the Place ?'
+    },
+
+    {
+        question: 'Guess the Body Part ?'
+    },
+
+    {
+        question: 'Guess the Fruit ?'
+    },
+
+    {
+        question: 'Guess the Device ?'
+    },
+
+    {
+        question: 'Guess the Person ?'
     }
 ]
 
@@ -166,7 +247,12 @@ const guess_questions = [
 let question_counter = 0;
 
 
+const question_data = () => {
+    const q_data = guess_questions[question_counter]
+    guess_question.innerHTML = q_data.question
 
+    
+}
 
 
 const already_loaded_questions = () => {
@@ -175,20 +261,11 @@ const already_loaded_questions = () => {
 
 window.addEventListener('DOMContentLoaded', already_loaded_questions)
 
-const already_loaded_hints = () => {
-    hint_cards()
-}
-
-window.addEventListener('DOMContentLoaded', already_loaded_hints)
 
 
 
-const question_data = () => {
-    const q_data = guess_questions[question_counter]
-    guess_question.innerHTML = q_data.question
 
-    
-}
+
 
 const next_guess = () => {
     console.log('Next Guess..!!')
@@ -263,30 +340,48 @@ prev_btn.addEventListener('click', prev_guess)
 //hiding answers
 const hiding_answers = [
     {
-        guesses: 'Sri lanka'
-
+        guesses: 'England'
+        
     },
 
 
     {
         guesses: 'Metallica'
+        
+
     },
 
 
     {
-        guesses: 'Lionel Messi'
+        guesses: 'Carrot'
     },
-
-    
 
     {
-        guesses: 'Nothing else matters'
+        guesses: 'Bread'
     },
-
-
 
     {
         guesses: 'Brazil'
+    },
+
+    {
+        guesses: 'Market'
+    },
+
+    {
+        guesses: 'Beard'
+    },
+
+    {
+        guesses: 'Apple'
+    },
+
+    {
+        guesses: 'Camera'
+    },
+
+    {
+        guesses: 'Architect'
     }
 
 
@@ -320,31 +415,6 @@ const prev_answer = () => {
 }
 
 
-
-
-
-const main_content = document.getElementById('content');
-
-
-
-//create new div(after won the game)
-const create_content_div = document.createElement('div')
-create_content_div.className = 'content-2'
-
-
-const create_h2 = document.createElement('h2');
-create_h2.innerHTML = 'You won the Game..!!'
-
-const create_reset_button = document.createElement('button')
-create_reset_button.innerHTML = 'Reset'
-create_reset_button.className = 'reset'
-
-create_content_div.append(create_h2)
-create_content_div.append(create_reset_button)
-
-
-
-
 //points counter
 let point_counter = 0;
 
@@ -355,11 +425,12 @@ const count_points = () => {
     
     console.log(point_counter+=10);
 
-    if(point_counter >= 50){
+    if(point_counter >= 100){
         console.log('You get All the points')
-
+        
         main_content.replaceWith(create_content_div)
-    }else if(point_counter < 50){
+        
+    }else if(point_counter < 100){
         console.log('please try get maximum points..')
 
         
@@ -369,6 +440,39 @@ const count_points = () => {
 
     
 }
+
+
+const main_content = document.getElementById('content');
+
+
+
+//create new div(for display after won the game)
+const create_content_div = document.createElement('div')
+create_content_div.className = 'content-2'
+
+
+
+
+const create_h2 = document.createElement('h2');
+create_h2.innerHTML = 'Congrats, You won the Game..!!'
+
+const create_h3 = document.createElement('h3')
+create_h3.innerHTML = 'Earned 100 Points..!!'
+
+const create_reset_button = document.createElement('button')
+create_reset_button.innerHTML = 'Reset'
+create_reset_button.className = 'reset'
+
+create_content_div.append(create_h2)
+create_content_div.append(create_h3)
+create_content_div.append(create_reset_button)
+
+
+
+
+
+
+
 
 let attempts_counter = 1;
 
@@ -383,6 +487,8 @@ const counts_attempts = () => {
 
     if(attempts_counter > 4){
         console.log('You lose the game..!!')
+
+        alert('You Lose The Game..!!')
 
         attempts.innerHTML = 'Your Attempts is over..'
 
@@ -421,6 +527,8 @@ const attempt_count_reset = () => {
     return attempts.innerHTML = ''
 }
 
+
+
 //restart game
 const reset_game = () => {
     console.log('Game restarted..!!')
@@ -433,9 +541,19 @@ const reset_game = () => {
 create_reset_button.addEventListener('click', reset_game)
 
 
+
+
+
+
+
+
+
 //guessing process
 const guess_process = () => {
     console.log("Guess..")
+
+
+    
 
     
 
@@ -444,7 +562,7 @@ const guess_process = () => {
     }
 
     else if(guess_input.value == hiding_answers[answer_counter].guesses){
-        alert('Guessed Correctly..!!')
+        
 
         
         next_guess()
@@ -455,6 +573,8 @@ const guess_process = () => {
 
         attempt_count_reset()
         
+
+        alert('Guessed Correctly..!!')
 
         
     }
@@ -493,4 +613,12 @@ guess_btn.addEventListener('click', guess_process)
 //and connect it to guess process and also 
 //save to localstorage(already done guesses)
 //calculate marks for each guess(point counter)
-//alredy guessed items.
+
+
+
+
+
+
+
+
+

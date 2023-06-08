@@ -5,49 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Guessgame.css">
-    <title>Guess Game</title>
+    <title>Guess The Word Game</title>
 </head>
 <body>
     <div class="main">
 
         <div class="content-cover">
 
-            <h1>Guess Game</h1>
+            <h1>Guess The Word</h1>
 
+
+            <div class="start-content" id="start-content">
+
+                
+
+                <h2>Welcome To the Word Guess Game.</h2>
+
+                <button id="start-game-btn">Start the Game</button>
+
+                <button id="how-to-play-btn">How to Play?</button>
+            </div>
+
+
+            <div class="how-to-play" id="game-instructions">
+
+                <h3>Game Instructions.</h3>
+                
+
+                <h4>1. This is word guessing game.</h4>
+                <h4>2. 10 questions have in this game.</h4>
+                <h4>3. 100 points available. You must get the maximum Points <br> To win the Game.</h4>
+                <h4>4. Each questions have three attempts. if attempts exceeded<br> You Lose The game.(Reloading the game)</h4>
+                <h4>5. When answers given to the input field. follow this rules.</h4>
+
+
+                <div>
+                    
+                      
+                      <h5><ul>All the guessing words started with Capital Letter(ex -: Cat, Dog)</ul></h5>
+                      <h5><ul>Please don't leave spaces while giving the guess word <br>like this example(ex -: Sri lanka,  C at  ,)</ul></h5>
+                      <h5><ul>Please read the hint box for find the answer.</ul></h5>
+
+                      
+                      
+                </div>
+                
+
+                
+
+            </div>
+
+             
+
+            
         
             
         
         
-        <div class="content" id="content">
+           <div class="content" id="content">
 
         
             
             
 
 
-            <div class="guess">
+             <div class="guess">
 
                 <h3 id="guess-question" class="guess-question"></h3>
-                <input type="text" class="guess-num" id="guess-num">
-            </div>
+                <input type="text" class="guess-num" id="guess-num" maxlength="50">
+             </div>
 
-            <div class="button">
+             <div class="button">
                 <button id="guess-btn">Guess</button>
-            </div>
 
-            <div class="attempts-count">
+             </div>
+
+             <div class="attempts-count">
                 <h4>Attempts Counter : <span id="attempts"></span></h4>
                 <h4>Attempts 3</h4>
-            </div>
+             </div>
 
             
 
-            <div class="num-cards-1" id="num-1-content">
+             <div class="num-cards-1" id="num-1-content">
                 <h3 id="num-open-1" class="num-1-open">Hint Box</h3>
-            </div>
+             </div>
 
 
-            <div class="button-section">
+             <div class="button-section">
 
 
                 <div class="prev-btn">
